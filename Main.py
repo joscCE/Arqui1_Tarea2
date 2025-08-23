@@ -2,19 +2,21 @@
 from CLK import CLK
 from PC import PC
 import time
+from CISC import CISC
+
+
+Cisc = CISC()
 
 intrucciones = [
-"SUMME",
-"ADDA",
-"HOLI"
+"SUMME 1, 3, 4",
+"ADDA 1, 3, 4",
+"HOLI 1, 3, 4"
 ]
-
 
 pc  = PC(Instrucciones = intrucciones)
 
-
 for n in range(len(intrucciones)):
-    print(pc.Fetch())
+    Cisc.Exec(pc.Fetch())
     time.sleep(0.5)
 
 
