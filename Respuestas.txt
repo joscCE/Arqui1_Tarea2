@@ -1,0 +1,9 @@
+
+1. Explique brevemente: ¿Por qué las arquitecturas RISC suelen ser más predecibles
+en sus tiempos de ejecución que las arquitecturas CISC? ¿En qué situaciones es
+importante esta predictibilidad?
+
+R- Las arquitecturas RISC son mas predecibles en sus tiempos de ejecucion, ya que tiene instrucciones mas simples que hace una sola cosa a la vez
+a diferencia de las CISC que su tiempo de ejecucion puede ser mas variable, asi como la cantidad de cosas que hace una sola instruccion.
+Esto es importante cuando se implementan tecnicas mas avanzadas de paralelismo, como puede ser pipeline.
+
