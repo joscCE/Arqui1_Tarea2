@@ -18,7 +18,7 @@ Arqui1_Tarea2/
 ├── Reg_mem.py    # Registros de propósito general (para RISC)
 ├── main.py       # Ejecución de pruebas
 └── README.md     # Documentación del proyecto
-
+```
 
 ---
 
