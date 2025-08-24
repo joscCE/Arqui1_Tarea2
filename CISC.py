@@ -34,12 +34,10 @@ class CISC:
 
     def SUMMEN(self):
         self.A = self.Memory.Read(self.Addres[1])
-        print("A: ", self.A)
         self.B = self.Memory.Read(self.Addres[2])
-        print("B: ", self.B)  
         result = self.Alu_unit.Sum(self.A, self.B)      
-        print("Resultado: ", result)
         self.Memory.Write(self.Addres[0], result)
+        print(f"SUMMEM {self.A} + {self.B} = {result} → {self.Addres[0]}")
         self.ciclos += 3
         self.Use_Instr +=1 
 

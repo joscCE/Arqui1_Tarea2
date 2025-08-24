@@ -36,7 +36,7 @@ for i in range(1, 11):
 
 for n in range(len(instrucciones_cisc)):
     Cisc.Exec()
-    time.sleep(0.5) #esto es para separar cada instruccion
+    time.sleep(0.6) #esto es para separar cada instruccion, = 3 ciclos
 
 #resultado
 
@@ -115,7 +115,7 @@ for i in range(1, 11):
 
 for n in range(len(instrucciones_risc)):
     Risc.Exec()
-    time.sleep(0.2)
+    time.sleep(0.2) # = 1 ciclo
 
 # resultado
 print("Vector resultante (21-30):")
