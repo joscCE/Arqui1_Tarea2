@@ -8,15 +8,16 @@ Este proyecto implementa un simulador sencillo de **arquitectura de computadores
 
 ## 📂 Estructura del proyecto
 
+```bash
 Arqui1_Tarea2/
-│── CISC.py # Implementación del procesador CISC
-│── RISC.py # Implementación del procesador RISC
-│── Mem.py # Módulo de memoria
-│── Alu.py # Unidad aritmético-lógica
-│── PC.py # Contador de programa
-│── Reg_mem.py # Registros de propósito general (para RISC)
-│── main.py # Ejecución de pruebas
-└── README.md
+├── CISC.py       # Implementación del procesador CISC
+├── RISC.py       # Implementación del procesador RISC
+├── Mem.py        # Módulo de memoria
+├── Alu.py        # Unidad aritmético-lógica
+├── PC.py         # Contador de programa
+├── Reg_mem.py    # Registros de propósito general (para RISC)
+├── main.py       # Ejecución de pruebas
+└── README.md     # Documentación del proyecto
 
 
 ---
