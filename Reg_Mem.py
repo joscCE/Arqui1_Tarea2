@@ -1,6 +1,12 @@
 class Reg_mem:
     def __init__(self):
-        self.cont = {}   
+        self.cont = {
+    "R1": 0,
+    "R2": 0,
+    "R3": 0,
+
+        }
+
     
     def Write(self, address, value):
         self.cont[address] = value   

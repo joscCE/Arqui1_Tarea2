@@ -18,12 +18,16 @@ class CISC:
 
         self.op, self.args = self.pc.Fetch().split(" ", 1)
         self.Addres = [x.strip() for x in self.args.split(",")]
-        print(self.Addres)
+        #print(self.Addres)
         if(self.op == "SUMMEM"):
             self.SUMMEN()
 
         elif(self.op == "CMP"):
             self.CPM()
+
+        elif(self.op == "BNE"):
+            self.BNE()
+
         else:
             print("ERROR: Deje de inventar instrucciones use SUMMEM!")
         
@@ -34,13 +38,20 @@ class CISC:
         self.B = self.Memory.Read(self.Addres[2])
         print("B: ", self.B)  
         result = self.Alu_unit.Sum(self.A, self.B)      
-        print(result)
+        print("Resultado: ", result)
         self.Memory.Write(self.Addres[0], result)
+        self.ciclos += 3
+        self.Use_Instr +=1 
 
     def CPM(self):
         self.A = self.Memory.Read(self.Addres[0])
-        print("A: ", self.A)
+        #print("A: ", self.A)
         self.B = self.Memory.Read(self.Addres[1])
-        print("B: ", self.B) 
+        #print("B: ", self.B) 
         self.Memory.Write("CPM", self.A == self.B)
+
+    def BNE(self):
+        self.A = self.Memory.Read("CPM")
+        if (self.A != 1):
+            self.pc.PC = self.Addres[0]
 
