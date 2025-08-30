@@ -8,7 +8,7 @@ class RISC:
         self.Memory = Mem()              
         self.Alu_unit = Alu()
         self.pc  = PC(Instr)  
-        self.Registros = Reg_mem()   # ahora usamos la clase Reg_mem
+        self.Registros = Reg_mem()   # ahora usamos  Reg_mem
         self.ciclos = 0 
         self.Use_Instr = 0
 
@@ -29,7 +29,7 @@ class RISC:
 
 
     def Traer(self):
-        # TRAER Rx, dir   (carga en un registro el valor desde memoria)
+        # TRAER Rx, dir   
         reg = self.args[0]
         direccion = self.args[1]
         valor = self.Memory.Read(direccion)
@@ -40,7 +40,7 @@ class RISC:
 
 
     def Sumar(self):
-        # SUMAR Rdest, Rsrc1, Rsrc2   (suma dos registros y guarda en destino)
+        # SUMAR Rdest, Rsrc1, Rsrc2   
         dest, r1, r2 = self.args
         v1 = self.Registros.Read(r1)
         v2 = self.Registros.Read(r2)
@@ -52,7 +52,7 @@ class RISC:
 
 
     def Escribir(self):
-        # ESCRIBIR dir, Rx   (guarda el valor de un registro en memoria)
+        # ESCRIBIR dir, Rx   
         direccion, reg = self.args
         valor = self.Registros.Read(reg)
         self.Memory.Write(direccion, valor)

@@ -35,3 +35,15 @@ Arqui1_Tarea2/
 - `ESCRIBIR dir, Rn` → Escribe en memoria (`dir`) el valor almacenado en el registro `Rn`.  
 
 ---
+
+## Ejecucion
+
+Ejecute en el archivo 
+
+- python3 Main.py
+
+
+
+
+
+
